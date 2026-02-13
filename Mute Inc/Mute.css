@@ -1,0 +1,123 @@
+body {
+    background: #0f172a;
+    color: white;
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(15,23,42,0.9)), url(img/Bulding.jpg);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.glass {
+    background-color: rgba(255,255,255,0.05);
+    border-radius: 15px;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: 0.4s;
+}
+.glass:hover { 
+    transform: translateY(10px); 
+}
+
+.btn-custom {
+    background: #3b82f6;
+    color: white;
+    border-radius: 30px;
+    padding: 10px 25px;
+}
+.btn-custom:hover { 
+    background: #2563eb; 
+}
+
+section { 
+    padding: 80px 0; 
+}
+
+footer {
+    background: #020617;
+    padding: 30px 0;
+}
+footer a { 
+    color: white; 
+    margin: 0 10px; 
+    font-size: 20px; }
+footer a:hover { 
+    color: #3b82f6; 
+}
+
+.fade-in {
+    animation: fadeIn 1.5s ease-in-out;
+}
+@keyframes fadeIn {
+    from {opacity: 0; 
+    transform: translateY(20px);}
+    to {opacity: 1; 
+    transform: translateY(0);}
+}
+
+@media(max-width: 768px) {
+    .hero h1 { font-size: 28px; }
+    .hero p { font-size: 14px; }
+}
+
+/* Name Animation */
+#name { 
+    color: #2563eb;
+    display: inline-block;
+    position: relative; 
+}
+#name.animate {
+    animation: moveUp 1s ease forwards;
+}
+@keyframes moveUp { 
+    0% { opacity: 0;
+         transform: translateY(20px);} 
+    100% { opacity:1; transform: translateY(0);
+    } 
+}
+
+/* Role Fade */
+#role { 
+    color: #2563eb; 
+    opacity: 0; 
+    transition: opacity 1s ease;
+}
+#role.show { 
+    opacity: 1;
+}
+
+/* Cursor */
+.cursor { 
+    color: #2563eb; 
+    font-weight: bold; 
+    animation: blink 1s infinite;
+}
+@keyframes blink { 
+    0%,50%,100% {opacity:1;} 25%,75% {opacity:0;} 
+}
+
+/* Project Cards */
+.project-card { 
+    border-radius: 15px; 
+    overflow: hidden; 
+    transition: transform 0.3s; 
+}
+.project-card:hover { 
+    transform: translateY(-10px); 
+}
+.project-img { 
+    width: 100%; 
+    height: 200px; 
+    object-fit: cover; 
+}
